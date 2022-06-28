@@ -49,86 +49,18 @@
     </form>
   </div>
 
-
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>{{test}}</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter and one number</b></mat-hint>
-  </mat-form-field>
-  <mat-form-field class="form-element">
-    <input matInput placeholder="Password">
-    <mat-hint style="width: 100%;font-size: 2rem;"><b>Choose a password of at least eight characters, one uppercase
-        letter Ashan Perera</b></mat-hint>
-  </mat-form-field>
+  <div>
+    <ng-container *ngIf="test.length > 10; else elseTemplate">
+      <button mat-raised-button [matTooltip]="test">
+        <span> {{ test.substring(0, 6) + '...'}}</span>
+      </button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <button mat-raised-button>
+        <span> {{test}}</span>
+      </button>
+    </ng-template>
+  </div>
 
 
 </div>

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   post: any = '';
 
 
-  test = "Choose a password of at least eight characters, one uppercase letter and one number @22222"
+  test = "Udaras Sample Message"
 
   constructor(private formBuilder: FormBuilder) { }
 
